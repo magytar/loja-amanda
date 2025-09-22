@@ -593,7 +593,7 @@ const [copied, setCopied] = useState(false)
         </li>
         <li className="flex items-start">
           <span className="font-bold mr-2">4.</span>
-          <span>Clique em "Confirmar Pagamento" abaixo</span>
+          <span>Clique em Confirmar Pagamento abaixo</span>
         </li>
       </ul>
     </div>
