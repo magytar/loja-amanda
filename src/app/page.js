@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, User, X, Plus, Minus, CreditCard, Lock, Menu, Instagram, MessageCircle, Copy  } from 'lucide-react';
+import { ShoppingCart, User, X, Plus, Minus, CreditCard, Lock, Check, Menu, Instagram, MessageCircle, Copy  } from 'lucide-react';
 import Image from 'next/image';
 
 const LojaRoupas = () => {
