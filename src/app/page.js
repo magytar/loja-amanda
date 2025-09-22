@@ -640,10 +640,7 @@ const [copied, setCopied] = useState(false)
             </div>
             <div className="p-4 sm:p-6">
               <div className="space-y-4">
-                <div className="text-center text-sm text-gray-600 mb-4 p-3 bg-blue-50 rounded-lg">
-                  <p><strong>Conta demo:</strong> demo@email.com</p>
-                  <p><strong>Senha:</strong> 123456</p>
-                </div>
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                   <input
@@ -761,7 +758,7 @@ const [copied, setCopied] = useState(false)
                 <div className="space-y-4">
                   {cart.map(item => (
                     <div key={item.id} className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 border rounded-lg">
-                      <img 
+                      <Image
                         src={item.imagem} 
                         alt={item.nome}
                         className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg"
@@ -988,7 +985,7 @@ const [copied, setCopied] = useState(false)
                   
                   {pixData.pix.base64 && (
                     <div className="flex justify-center">
-                      <img 
+                      <Image
                         src={`data:image/png;base64,${pixData.pix.base64}`}
                         alt="QR Code PIX"
                         className="w-48 h-48 border rounded-lg"
@@ -1069,9 +1066,11 @@ const ProductCard = ({ produto, addToCart }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 border border-gray-100">
       <div className="relative overflow-hidden">
-        <img 
+        <Image
           src={produto.imagem} 
           alt={produto.nome}
+          width={300}
+          height={300}
           className="w-full h-64 sm:h-80 object-cover transition-transform duration-300 hover:scale-110"
         />
         <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1">
