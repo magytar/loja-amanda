@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { ShoppingCart, User, X, Plus, Minus, CreditCard, Lock, Check, Menu, Instagram, MessageCircle, Copy  } from 'lucide-react';
 import Image from 'next/image';
 
-import Vestidofloral from "./imgs/VestidoFloral1.jpg"
-import Vestidoflora2 from "./imgs/VestidoFloral2.jpg"
+import Vestidofloral from "./imgs/Vestidofloral1.jpg"
+import Vestidoflora2 from "./imgs/Vestidofloral2.jpg"
 
 import Vestidolongocostaaberta1 from "./imgs/Vestidolongocostaaberta1.jpg"
 import Vestidolongocostaaberta2 from "./imgs/Vestidolongocostaaberta2.jpg"
