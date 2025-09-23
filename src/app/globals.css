@@ -24,34 +24,39 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Inputs e textareas padrão */
+input,
 textarea {
   background-color: #fff;   /* fundo claro */
-  color: #000;              /* texto preto */
-  caret-color: #000;        /* cursor preto */
+  color: #000;              /* texto escuro */
+  caret-color: #000;        /* cursor escuro */
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  padding: 0.75rem;
+  padding: 0.6rem 0.75rem;
   font-size: 1rem;
-  resize: vertical;
   outline: none;
 }
 
+/* Foco */
+input:focus,
 textarea:focus {
   border-color: #3b82f6; /* azul */
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
 
-/* Ajuste automático para modo escuro */
+/* Ajuste automático para dark mode */
 @media (prefers-color-scheme: dark) {
+  input,
   textarea {
     background-color: #1f2937; /* cinza escuro */
-    color: #fff;               /* texto branco */
+    color: #fff;               /* texto claro */
     caret-color: #fff;
     border: 1px solid #374151;
   }
 
+  input:focus,
   textarea:focus {
-    border-color: #60a5fa; /* azul claro */
+    border-color: #60a5fa;
     box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
   }
 }
