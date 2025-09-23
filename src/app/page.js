@@ -18,6 +18,9 @@ import Calcapantalona4 from "./imgs/Calcapantalona4.jpg"
 import Conjuntoelegante from "./imgs/conjuntoelegante.jpg"
 import Conjuntoelegante2 from "./imgs/conjuntoelegante2.jpg"
 
+import Conjunto1 from "./imgs/conjunto1.png"
+import Conjunto2 from "./imgs/conjunto2.png"
+
 const LojaRoupas = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(false);
@@ -111,6 +114,22 @@ const [copied, setCopied] = useState(false)
       imagem2: Conjuntoelegante2,
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Baje']
+    },
+    {
+      id: 5,
+      nome: "Conjunto Top + Calça",
+      preco: 25.99,
+      imagem: Conjunto1,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Roxo']
+    },
+    {
+      id: 6,
+      nome: "Conjunto Top + Short",
+      preco: 27.99,
+      imagem: Conjunto2,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Foto']
     },
   ];
 
