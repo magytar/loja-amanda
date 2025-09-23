@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { ShoppingCart, User, X, Plus, Minus, CreditCard, Lock, Check, Menu, Instagram, MessageCircle, Copy  } from 'lucide-react';
 import Image from 'next/image';
 
-import VestidoFloral from "./imgs/VestidoFloral1.jpg"
-import VestidoFlora2 from "./imgs/VestidoFloral2.jpg"
+import Vestidofloral from "./imgs/VestidoFloral1.jpg"
+import Vestidoflora2 from "./imgs/VestidoFloral2.jpg"
 
 import Vestidolongocostaaberta1 from "./imgs/Vestidolongocostaaberta1.jpg"
 import Vestidolongocostaaberta2 from "./imgs/Vestidolongocostaaberta2.jpg"
@@ -78,8 +78,8 @@ const [copied, setCopied] = useState(false)
       id: 1,
       nome: "Vestido Floral",
       preco: 38.99,
-      imagem: VestidoFloral,
-      imagem2: VestidoFlora2,
+      imagem: Vestidofloral,
+      imagem2: Vestidoflora2,
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Branco']
     },
