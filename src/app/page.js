@@ -73,6 +73,7 @@ const [copied, setCopied] = useState(false)
       nome: "Jeans Skinny Feminino",
       preco: 159.90,
       imagem: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=400&fit=crop",
+      imagem2: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&h=400&fit=crop",
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Azul Escuro', 'Azul Claro']
     },
@@ -352,7 +353,7 @@ const [copied, setCopied] = useState(false)
                 <span className="text-white font-bold text-lg sm:text-xl">M</span>
               </div>
               <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                ModaStyle
+                AmandaStore
               </h1>
             </div>
 
@@ -496,7 +497,7 @@ const [copied, setCopied] = useState(false)
       {/* Botões de Contato Flutuantes */}
       <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-30">
         <a
-          href="https://wa.me/5511999999999"
+          href="https://wa.me/19994378031"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all transform hover:scale-110"
@@ -505,7 +506,7 @@ const [copied, setCopied] = useState(false)
           <MessageCircle size={24} />
         </a>
         <a
-          href="https://instagram.com/modastyle"
+          href="https://instagram.com/oliveiraamandaa02"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg transition-all transform hover:scale-110"
@@ -1063,38 +1064,68 @@ const ProductCard = ({ produto, addToCart }) => {
   const [selectedSize, setSelectedSize] = useState(produto.tamanhos[0]);
   const [selectedColor, setSelectedColor] = useState(produto.cores[0]);
 
+  // Carrossel de imagens
+  const imagens = [produto.imagem, produto.imagem2, produto.imagem3].filter(Boolean);
+  const [index, setIndex] = useState(0);
+
+  const nextImage = () => setIndex((prev) => (prev + 1) % imagens.length);
+  const prevImage = () => setIndex((prev) => (prev - 1 + imagens.length) % imagens.length);
+
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 border border-gray-100">
+      {/* Imagem / carrossel */}
       <div className="relative overflow-hidden">
         <Image
-          src={produto.imagem} 
+          src={imagens[index]}
           alt={produto.nome}
           width={300}
           height={300}
           className="w-full h-64 sm:h-80 object-cover transition-transform duration-300 hover:scale-110"
         />
+
+        {/* Navegação de imagens */}
+        {imagens.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 backdrop-blur-sm rounded-full p-1 text-lg"
+            >
+              ◀
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 backdrop-blur-sm rounded-full p-1 text-lg"
+            >
+              ▶
+            </button>
+          </>
+        )}
+
+        {/* Preço */}
         <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/90 backdrop-blur-sm rounded-full px-2 sm:px-3 py-1">
           <span className="text-lg sm:text-2xl font-bold text-purple-600">
             R$ {produto.preco.toFixed(2)}
           </span>
         </div>
       </div>
-      
+
+      {/* Informações do produto */}
       <div className="p-4 sm:p-6">
         <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">{produto.nome}</h3>
-        
+
         <div className="space-y-4">
+          {/* Tamanhos */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Tamanho:</label>
             <div className="flex gap-2 flex-wrap">
-              {produto.tamanhos.map(tamanho => (
+              {produto.tamanhos.map((tamanho) => (
                 <button
                   key={tamanho}
                   onClick={() => setSelectedSize(tamanho)}
                   className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-all text-sm sm:text-base ${
-                    selectedSize === tamanho 
-                      ? 'bg-purple-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    selectedSize === tamanho
+                      ? "bg-purple-600 text-white shadow-lg"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
                   {tamanho}
@@ -1103,19 +1134,23 @@ const ProductCard = ({ produto, addToCart }) => {
             </div>
           </div>
 
+          {/* Cores */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Cor:</label>
-            <select 
+            <select
               value={selectedColor}
               onChange={(e) => setSelectedColor(e.target.value)}
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm sm:text-base"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm sm:text-base bg-white text-black caret-black dark:bg-gray-800 dark:text-white dark:caret-white"
             >
-              {produto.cores.map(cor => (
-                <option key={cor} value={cor}>{cor}</option>
+              {produto.cores.map((cor) => (
+                <option key={cor} value={cor}>
+                  {cor}
+                </option>
               ))}
             </select>
           </div>
 
+          {/* Botão adicionar ao carrinho */}
           <button
             onClick={() => addToCart(produto, selectedSize, selectedColor)}
             className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 sm:py-4 rounded-xl font-bold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base"
@@ -1127,5 +1162,6 @@ const ProductCard = ({ produto, addToCart }) => {
     </div>
   );
 };
+
 
 export default LojaRoupas;

@@ -52,8 +52,8 @@ select:focus {
   input,
   textarea,
   select {
-    background-color: #1f2937; /* cinza escuro */
-    color: #fff;               /* texto claro */
+    background-color: #fff; /* cinza escuro */
+    color: #1f2937;               /* texto claro */
     caret-color: #fff;
     border: 1px solid #374151;
   }
