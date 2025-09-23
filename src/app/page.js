@@ -4,6 +4,20 @@ import React, { useState, useEffect } from 'react';
 import { ShoppingCart, User, X, Plus, Minus, CreditCard, Lock, Check, Menu, Instagram, MessageCircle, Copy  } from 'lucide-react';
 import Image from 'next/image';
 
+import VestidoFloral from "./imgs/VestidoFloral1.jpg"
+import VestidoFlora2 from "./imgs/VestidoFloral2.jpg"
+
+import Vestidolongocostaaberta1 from "./imgs/Vestidolongocostaaberta1.jpg"
+import Vestidolongocostaaberta2 from "./imgs/Vestidolongocostaaberta2.jpg"
+
+import Calcapantalona1 from "./imgs/Calcapantalona1.jpg"
+import Calcapantalona2 from "./imgs/Calcapantalona2.jpg"
+import Calcapantalona3 from "./imgs/Calcapantalona3.jpg"
+import Calcapantalona4 from "./imgs/Calcapantalona4.jpg"
+
+import Conjuntoelegante from "./imgs/conjuntoelegante.jpg"
+import Conjuntoelegante2 from "./imgs/conjuntoelegante2.jpg"
+
 const LojaRoupas = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(false);
@@ -62,85 +76,42 @@ const [copied, setCopied] = useState(false)
   const produtos = [
     {
       id: 1,
-      nome: "Camiseta Básica Premium",
-      preco: 89.90,
-      imagem: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=400&fit=crop",
+      nome: "Vestido Floral",
+      preco: 38.99,
+      imagem: VestidoFloral,
+      imagem2: VestidoFlora2,
       tamanhos: ['P', 'M', 'G', 'GG'],
-      cores: ['Branco', 'Preto', 'Azul']
+      cores: ['Branco']
     },
     {
       id: 2,
-      nome: "Jeans Skinny Feminino",
-      preco: 159.90,
-      imagem: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=400&fit=crop",
-      imagem2: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&h=400&fit=crop",
+      nome: "Vestido Longo Costa Aberta",
+      preco: 42.99,
+      imagem: Vestidolongocostaaberta1,
+      imagem2: Vestidolongocostaaberta2,
       tamanhos: ['P', 'M', 'G', 'GG'],
-      cores: ['Azul Escuro', 'Azul Claro']
+      cores: ['Branco', 'Preto', 'Rosa']
     },
     {
       id: 3,
-      nome: "Vestido Floral Verão",
-      preco: 199.90,
-      imagem: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&h=400&fit=crop",
-      tamanhos: ['P', 'M', 'G'],
-      cores: ['Floral Rosa', 'Floral Azul', 'Floral Verde']
+      nome: "Calça Pantalona Alfaiataria",
+      preco: 18.99,
+      imagem: Calcapantalona1,
+      imagem2: Calcapantalona2,
+      imagem3: Calcapantalona3,
+      imagem4: Calcapantalona4,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Baje', 'Preto', 'Vinho', 'Cinza']
     },
     {
       id: 4,
-      nome: "Blazer Executivo",
-      preco: 299.90,
-      imagem: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=400&fit=crop",
+      nome: "Conjunto Elegante Feminino Tomara Que Caia + Calça Pantalona Alfaiataria ",
+      preco: 59.99,
+      imagem: Conjuntoelegante,
+      imagem2: Conjuntoelegante2,
       tamanhos: ['P', 'M', 'G', 'GG'],
-      cores: ['Preto', 'Marinho', 'Cinza']
+      cores: ['Baje']
     },
-    {
-      id: 5,
-      nome: "Shorts Jeans Destroyed",
-      preco: 79.90,
-      imagem: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=300&h=400&fit=crop",
-      tamanhos: ['P', 'M', 'G'],
-      cores: ['Azul Desbotado']
-    },
-    {
-      id: 6,
-      nome: "Camisa Social Slim",
-      preco: 139.90,
-      imagem: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300&h=400&fit=crop",
-      tamanhos: ['P', 'M', 'G', 'GG'],
-      cores: ['Branco', 'Azul Claro', 'Rosa']
-    },
-    {
-      id: 7,
-      nome: "Saia Midi Plissada",
-      preco: 119.90,
-      imagem: "https://images.unsplash.com/photo-1583496661160-fb5886a13d61?w=300&h=400&fit=crop",
-      tamanhos: ['P', 'M', 'G'],
-      cores: ['Preto', 'Vinho', 'Mostarda']
-    },
-    {
-      id: 8,
-      nome: "Moletom Oversized",
-      preco: 179.90,
-      imagem: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=300&h=400&fit=crop",
-      tamanhos: ['M', 'G', 'GG'],
-      cores: ['Cinza', 'Preto', 'Bege']
-    },
-    {
-      id: 9,
-      nome: "Calça Legging Fitness",
-      preco: 99.90,
-      imagem: "https://images.unsplash.com/photo-1506629905607-ce11834e8c94?w=300&h=400&fit=crop",
-      tamanhos: ['P', 'M', 'G', 'GG'],
-      cores: ['Preto', 'Cinza', 'Vinho']
-    },
-    {
-      id: 10,
-      nome: "Jaqueta Jeans Vintage",
-      preco: 249.90,
-      imagem: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&h=400&fit=crop",
-      tamanhos: ['G'],
-      cores: ['Azul Vintage']
-    }
   ];
 
   // Função para mostrar mensagens
@@ -481,7 +452,7 @@ const [copied, setCopied] = useState(false)
         </div>
       </section>
 
-      <section className="py-8 sm:py-16 px-4">
+      <section className="py-1 sm:py-1 px-4">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
             Nossa Coleção
