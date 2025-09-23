@@ -24,22 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* Inputs e textareas padrão */
+/* Inputs, textareas e selects */
 input,
-textarea {
+textarea,
+select {
   background-color: #fff;   /* fundo claro */
   color: #000;              /* texto escuro */
-  caret-color: #000;        /* cursor escuro */
+  caret-color: #000;        /* cursor escuro (não afeta select) */
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   padding: 0.6rem 0.75rem;
   font-size: 1rem;
   outline: none;
+  appearance: none;         /* remove estilo padrão do select */
 }
 
 /* Foco */
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   border-color: #3b82f6; /* azul */
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
@@ -47,7 +50,8 @@ textarea:focus {
 /* Ajuste automático para dark mode */
 @media (prefers-color-scheme: dark) {
   input,
-  textarea {
+  textarea,
+  select {
     background-color: #1f2937; /* cinza escuro */
     color: #fff;               /* texto claro */
     caret-color: #fff;
@@ -55,8 +59,18 @@ textarea:focus {
   }
 
   input:focus,
-  textarea:focus {
+  textarea:focus,
+  select:focus {
     border-color: #60a5fa;
     box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
   }
+}
+
+/* Adicionar seta customizada no select (opcional) */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1rem;
+  padding-right: 2rem; /* espaço para a seta */
 }
