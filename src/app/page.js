@@ -12,6 +12,9 @@ import Vestidolongocostaaberta2 from "./imgs/Vestidolongocostaaberta2.jpg"
 
 import Vestido1 from "./imgs/Vestido1.jpg"
 
+import Vestido2 from "./imgs/Vestido2.jpg"
+import Vestido2_2 from "./imgs/Vestido2_2.jpg"
+
 import Calcapantalona1 from "./imgs/Calcapantalona1.jpg"
 import Calcapantalona2 from "./imgs/Calcapantalona2.jpg"
 import Calcapantalona3 from "./imgs/Calcapantalona3.jpg"
@@ -239,6 +242,16 @@ const [copied, setCopied] = useState(false)
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Rosa', 'Azul', 'Laranja']
     },
+    {
+      id: 16,
+      nome: "Vestido Ombro Caido Em Veludo",
+      preco:54.99,
+      imagem: Vestido2,
+      imagem2: Vestido2_2,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Vinho', 'Preto',]
+    },
+  
   ];
 
   // Função para mostrar mensagens
