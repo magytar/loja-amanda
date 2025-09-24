@@ -21,6 +21,14 @@ import Conjuntoelegante2 from "./imgs/conjuntoelegante2.jpg"
 import Conjunto1 from "./imgs/conjunto1.png"
 import Conjunto2 from "./imgs/conjunto2.png"
 
+import Conjunto3 from "./imgs/conjunto3.jpg"
+import Conjunto3_2 from "./imgs/conjunto3_2.jpg"
+import Conjunto3_3 from "./imgs/conjunto3_3.jpg"
+
+import Conjunto4 from "./imgs/conjunto4.jpg"
+import Conjunto4_2 from "./imgs/conjunto4_2.jpg"
+import Conjunto4_3 from "./imgs/conjunto4_3.jpg"
+
 const LojaRoupas = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(false);
@@ -130,6 +138,26 @@ const [copied, setCopied] = useState(false)
       imagem: Conjunto2,
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Foto']
+    },
+    {
+      id: 7,
+      nome: "Conjunto Top + Calça",
+      preco: 32.99,
+      imagem: Conjunto3,
+      imagem2: Conjunto3_2,
+      imagem3: Conjunto3_3,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Preto','Rosa','Roxo','Cinza']
+    },
+    {
+      id: 8,
+      nome: "Conjunto Top + Short Estampa De Leopardo",
+      preco: 32.99,
+      imagem: Conjunto4,
+      imagem2: Conjunto4_2,
+      imagem3: Conjunto4_3,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Azul','Rosa','Roxo']
     },
   ];
 
@@ -1064,13 +1092,13 @@ const ProductCard = ({ produto, addToCart }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 border border-gray-100">
       {/* Imagem / carrossel */}
-      <div className="relative overflow-hidden">
+      <div className="relative w-full min-h-64 max-h-80 overflow-hidden">
         <Image
           src={imagens[index]}
           alt={produto.nome}
-          width={300}
-          height={300}
-          className="w-full h-64 sm:h-80 object-cover transition-transform duration-300 hover:scale-110"
+          fill
+          className="object-contain transition-transform duration-300 hover:scale-105"
+
         />
 
         {/* Navegação de imagens */}
