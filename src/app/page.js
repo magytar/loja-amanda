@@ -29,6 +29,19 @@ import Conjunto4 from "./imgs/conjunto4.jpg"
 import Conjunto4_2 from "./imgs/conjunto4_2.jpg"
 import Conjunto4_3 from "./imgs/conjunto4_3.jpg"
 
+import Conjunto5 from "./imgs/conjunto5.jpg"
+
+import Conjunto6 from "./imgs/conjunto6.jpg"
+import Conjunto6_2 from "./imgs/conjunto6_2.jpg"
+
+import Conjunto7 from "./imgs/conjunto7.jpg"
+import Conjunto7_2 from "./imgs/conjunto7_2.jpg"
+import Conjunto7_3 from "./imgs/conjunto7_3.jpg"
+
+import Cropped from "./imgs/cropped1.jpg"
+
+import Top1 from "./imgs/top1.jpg"
+
 const LojaRoupas = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [showLogin, setShowLogin] = useState(false);
@@ -158,6 +171,49 @@ const [copied, setCopied] = useState(false)
       imagem3: Conjunto4_3,
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Azul','Rosa','Roxo']
+    },
+    {
+      id: 9,
+      nome: "Conjunto Top Cropped + Short Slim Brasil",
+      preco: 26.99,
+      imagem: Conjunto5,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Brasil']
+    },
+    {
+      id: 10,
+      nome: "Conjunto Esportivo Com Top e Short Liso e Sem Costura",
+      preco: 28.99,
+      imagem: Conjunto6,
+      imagem2: Conjunto6_2,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Marron']
+    },
+    {
+      id: 11,
+      nome: "Conjunto Top Tubular 3D Floral E Mini Saia",
+      preco: 29.99,
+      imagem: Conjunto7,
+      imagem2: Conjunto7_2,
+      imagem2: Conjunto7_3,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Rosa','Preto','Branco']
+    },
+    {
+      id: 12,
+      nome: "Cropped",
+      preco: 29.99,
+      imagem: Cropped,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Vermelho','Vermelho Vibrante', 'Rosa', 'Azul', 'Verde Bandeira', 'Verde Musgo']
+    },
+    {
+      id: 13,
+      nome: "Tops Poliamida",
+      preco: 29.99,
+      imagem: Top1,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Vermelho','Preto', 'Cinza', 'Azul Bebe', 'Amarelo', 'Verde Musgo']
     },
   ];
 
