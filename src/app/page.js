@@ -10,6 +10,8 @@ import Vestidoflora2 from "./imgs/Vestidofloral2.jpg"
 import Vestidolongocostaaberta1 from "./imgs/Vestidolongocostaaberta1.jpg"
 import Vestidolongocostaaberta2 from "./imgs/Vestidolongocostaaberta2.jpg"
 
+import Vestido1 from "./imgs/Vestido1.jpg"
+
 import Calcapantalona1 from "./imgs/Calcapantalona1.jpg"
 import Calcapantalona2 from "./imgs/Calcapantalona2.jpg"
 import Calcapantalona3 from "./imgs/Calcapantalona3.jpg"
@@ -37,6 +39,10 @@ import Conjunto6_2 from "./imgs/conjunto6_2.jpg"
 import Conjunto7 from "./imgs/conjunto7.jpg"
 import Conjunto7_2 from "./imgs/conjunto7_2.jpg"
 import Conjunto7_3 from "./imgs/conjunto7_3.jpg"
+
+import Conjunto8 from "./imgs/conjunto8.jpg"
+import Conjunto8_2 from "./imgs/conjunto8_2.jpg"
+import Conjunto8_3 from "./imgs/conjunto8_3.jpg"
 
 import Cropped from "./imgs/cropped1.jpg"
 
@@ -210,10 +216,28 @@ const [copied, setCopied] = useState(false)
     {
       id: 13,
       nome: "Tops Poliamida",
-      preco: 29.99,
+      preco: 17.99,
       imagem: Top1,
       tamanhos: ['P', 'M', 'G', 'GG'],
       cores: ['Vermelho','Preto', 'Cinza', 'Azul Bebe', 'Amarelo', 'Verde Musgo']
+    },
+    {
+      id: 14,
+      nome: "Vestido Assimetrico Mini Com Franzido",
+      preco:54.99,
+      imagem: Vestido1,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Vermelho']
+    },
+    {
+      id: 15,
+      nome: "Conjunto Top + Saia Com Manchas",
+      preco:54.99,
+      imagem: Conjunto8,
+      imagem2: Conjunto8_2,
+      imagem3: Conjunto8_3,
+      tamanhos: ['P', 'M', 'G', 'GG'],
+      cores: ['Rosa', 'Azul', 'Laranja']
     },
   ];
 
